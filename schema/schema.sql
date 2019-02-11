@@ -12,6 +12,8 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
 
+INSERT INTO `accounts`(name, password) VALUES ('test',SHA1('test'));
+
 CREATE TABLE IF NOT EXISTS `players` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -72,6 +74,8 @@ CREATE TABLE IF NOT EXISTS `players` (
   FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`) ON DELETE CASCADE,
   KEY `vocation` (`vocation`)
 ) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
+
+INSERT INTO `players`(name, account_id,conditions) VALUES ('test',1,'');
 
 CREATE TABLE IF NOT EXISTS `account_bans` (
   `account_id` int(11) NOT NULL,

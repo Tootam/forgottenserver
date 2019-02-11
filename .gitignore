@@ -157,6 +157,12 @@ $RECYCLE.BIN/
 # Installer logs
 pip-log.txt
 
+#eclipse
+.project
+cmake/.project
+CMakeCache.txt
+CMakeFiles/*
+
 # Unit test / coverage reports
 .coverage
 .tox

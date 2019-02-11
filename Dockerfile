@@ -29,7 +29,8 @@ RUN apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/test
   gmp \
   luajit \
   mariadb-connector-c \
-  pugixml
+  pugixml \
+  mysql-client
 
 RUN ln -s /usr/lib/libcryptopp.so /usr/lib/libcryptopp.so.5.6
 COPY --from=build /usr/src/forgottenserver/build/tfs /bin/tfs
